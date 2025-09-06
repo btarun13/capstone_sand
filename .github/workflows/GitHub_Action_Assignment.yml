@@ -1,6 +1,6 @@
 # PUT YOUR GITHUB ACTION WORKFLOW HERE
 
-name: GitHub Action
+name: GitHub Action code check
 
 on: pull_request
   # PUT A TRIGGER HERE
@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest  
     
     steps:
-    - name: checkout files
     - uses: actions/checkout@v4
-    
+    - name: checkout files
+
       run: |
         # PUT A STEP HERE 'uses' or 'run'
         echo "run code quality checks"
