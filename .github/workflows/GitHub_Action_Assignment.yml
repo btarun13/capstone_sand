@@ -2,12 +2,18 @@
 
 name: GitHub Action
 
-on:
+on: pull_request
   # PUT A TRIGGER HERE
+  
 
 jobs:
-  job-name: # CALL THE JOB SOMETHING
+  tn_job-name: 
     runs-on: ubuntu-latest  
     
     steps:
+    - name: checkout files
+    - uses: actions/checkout@v4
+    
+      run: |
         # PUT A STEP HERE 'uses' or 'run'
+        echo "run code quality checks"
